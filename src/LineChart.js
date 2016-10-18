@@ -176,8 +176,8 @@ export default class LineChart extends Component<void, any, any> {
             var lines = [];
 
 
-            for(var lineData in this.props.data) {
-                lines.push(this._drawLine(this.props.data[lineData], this.props.dataColors[lineData]));
+						for(i = 0; i < this.props.data.length; i+=1) {
+                lines.push(this._drawLine(this.props.data[i], this.props.dataColors[i]));
             }
 
             return lines;
